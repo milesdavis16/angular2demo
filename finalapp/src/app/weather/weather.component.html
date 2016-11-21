@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+
+<h3>
+  5 Day Weather Forecast
+</h3>
+<i>
+<h6>using Angular2 / OpenWeatherMap / High Charts</h6>
+</i>
+
+<!--
+<h1 style="display:inline">5 Day Weather Forecast </h1><i><h5 style="display:inline">(using Angular2 / OpenWeatherMap / High Charts)</h5></i>
+-->
+
+<div class="row">
+  <form class="col s4">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="hashtags" type="text" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}">
+        <label for="hashtags">Search by location</label>
+      </div>
+    </div>
+    <button class="waves-effect waves-light btn" (click)="searchCall()">Search</button>
+    <!--
+          <button class="ui button" (click)="printResult()">Print Result</button>
+    -->
+
+  </form>
+
+</div>
+<br>
+<div>
+  <chart [options]="options"></chart>
+</div>

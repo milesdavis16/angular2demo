@@ -1,0 +1,18 @@
+<nav>
+  <div class="nav-wrapper blue">
+    <a href="#" class="brand-logo right"><h4 style="display:inline">Web Applications</h4><h6 style="display:inline"> (CSC436)</h6><h6 style="display:inline"> by Miles Dougan</h6></a>
+    <ul id="nav-mobile" class="left">
+      <li><a routerLink="home"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a routerLink="twitter" routerLinkActive="active">Twitter</a></li>
+      <li><a routerLink="weather" routerLinkActive="active">Weather</a></li>
+      <li><a routerLink="about" routerLinkActive="active">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--
+<hr style="clear:both"/>
+-->
+<router-outlet></router-outlet>

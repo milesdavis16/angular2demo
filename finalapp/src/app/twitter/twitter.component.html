@@ -1,0 +1,30 @@
+
+<router-outlet></router-outlet>
+
+<h3>Twitter Search</h3>
+
+<div class="row">
+  <form class="col s4">
+    <div class="row">
+      <div class="col s12">Search recent or popular tweets by topic, including twitter characters: </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="hashtags" type="text" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}">
+        <label for="hashtags">topic, #hashtags, from:twitteracct, @mentions</label>
+      </div>
+    </div>
+    <button class="waves-effect waves-light btn blue" (click)="searchCall()">Search</button>
+
+  </form>
+
+</div>
+
+<ul class="collection">
+  <li *ngFor="let item of tweetsdata" class="collection-item avatar">
+    <img alt="HTML5" src={{item.user.profile_image_url}} class="circle">
+    <span class="title">{{item.user.name}}</span>
+    <span [innerHTML]="item.text | linky"></span>
+  </li>
+</ul>
+
